@@ -35,7 +35,7 @@ body {
   text-decoration: none;
   color: #000000;
 }
-.navbar li .icon {
+.navbar li .navbar__icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
