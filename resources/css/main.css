@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito");
 body {
   margin: 0;
   padding: 0;
@@ -8,13 +9,15 @@ body {
 }
 
 .navbar {
+  position: sticky;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 .navbar nav {
-  padding: 12px 32px;
-  background: #F8F8F8;
+  margin: 0 1rem;
+  padding: 12px 12px;
+  background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 34px;
   text-align: center;
@@ -29,16 +32,54 @@ body {
   list-style: none;
 }
 .navbar li a {
+  font-family: Nunito;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   color: #000000;
 }
+.navbar li a:hover {
+  color: #F08F77;
+}
 .navbar li .navbar__icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .navbar nav {
+    padding: 12px 32px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 34px;
+    text-align: center;
+  }
+  .navbar ul {
+    padding: 0;
+    margin: 0;
+    gap: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  .navbar li a {
+    font-family: Nunito;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+  }
+  .navbar li a:hover {
+    color: #F08F77;
+  }
+  .navbar li .navbar__icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
 }
 
 .footer {
@@ -62,7 +103,6 @@ body {
   }
 }
 .footer__separator {
-  display: none;
   border-top: 1px solid #2A2D34;
   opacity: 10%;
   margin: 0;
@@ -136,5 +176,161 @@ body {
 @media screen and (min-width: 1440px) {
   .footer__socials {
     justify-self: end;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero__title {
+  font-family: Nunito;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #2A2D34;
+  margin: 2rem;
+}
+.hero__subtitle {
+  font-family: Nunito;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #2A2D34;
+  letter-spacing: 1px;
+}
+.hero__image {
+  position: sticky;
+  width: 500px;
+}
+@media screen and (min-width: 1440px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__title {
+    font-family: Nunito;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #2A2D34;
+    margin: 2rem;
+  }
+  .hero__subtitle {
+    font-family: Nunito;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #2A2D34;
+    letter-spacing: 1px;
+  }
+  .hero__image {
+    position: sticky;
+    width: 800px;
+  }
+}
+
+.accessories {
+  color: #2A2D34;
+  text-align: center;
+}
+.accessories__title {
+  font-family: Nunito;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #2A2D34;
+  letter-spacing: 1px;
+}
+.accessories__text {
+  font-family: Nunito;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding-bottom: 3rem;
+  opacity: 0.6;
+  margin: 2rem 2rem;
+}
+.accessories__separator {
+  border-top: 2px solid #000000;
+  opacity: 0.2;
+  margin: 0 14rem;
+}
+@media screen and (min-width: 1440px) {
+  .accessories__title {
+    font-family: Nunito;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #2A2D34;
+    letter-spacing: 1px;
+    padding-top: 5rem;
+  }
+  .accessories__text {
+    font-family: Nunito;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding-bottom: 3rem;
+    opacity: 0.6;
+    margin: 2rem 20rem;
+  }
+  .accessories__separator {
+    border-top: 2px solid #000000;
+    opacity: 0.2;
+    margin: 0 43rem;
+  }
+}
+
+.accessory {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  text-align: center;
+  color: #2A2D34;
+}
+@media screen and (min-width: 1440px) {
+  .accessory {
+    flex-direction: row;
+    column-gap: 1.5rem;
+    margin: 0 7rem;
+    padding-bottom: 7.5rem;
+  }
+}
+.accessory__image {
+  margin-bottom: 3rem;
+}
+.accessory__subtitle {
+  font-family: Nunito;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+.accessory__description {
+  font-family: Nunito;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0 1rem;
+  opacity: 0.8;
+}
+
+body {
+  font-family: Nunito;
+}
+
+header .header__logo {
+  position: absolute;
+  margin: 1rem 5rem;
+}
+header .header__shape {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  header .header__shape {
+    display: unset;
+    position: absolute;
+    left: 18.7rem;
   }
 }
