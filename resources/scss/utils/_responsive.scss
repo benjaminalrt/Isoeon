@@ -1,0 +1,5 @@
+@mixin xxl {
+    @media screen and (min-width: 1440px) {
+        @content
+    }
+}
