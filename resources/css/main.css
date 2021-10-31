@@ -8,6 +8,35 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.button {
+  font-weight: 500;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  background-color: #FFAD9B;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+  font-family: Nunito, sans-serif;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  z-index: 9;
+}
+.button--mobile-centered {
+  margin: 0 auto;
+}
+@media screen and (min-width: 1440px) {
+  .button--mobile-centered {
+    z-index: 9;
+    margin: 1rem;
+  }
+}
+.button:hover {
+  background-color: #F08F77;
+}
+
 .navbar {
   position: sticky;
   display: flex;
@@ -21,6 +50,11 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 34px;
   text-align: center;
+}
+.navbar nav__burger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .navbar ul {
   padding: 0;
@@ -54,6 +88,9 @@ body {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 34px;
     text-align: center;
+  }
+  .navbar nav__burger-button {
+    display: none;
   }
   .navbar ul {
     padding: 0;
@@ -314,6 +351,81 @@ body {
   line-height: 1.5rem;
   margin: 0 1rem;
   opacity: 0.8;
+}
+
+.customize {
+  color: #2A2D34;
+  text-align: center;
+  display: initial;
+}
+.customize__title {
+  font-family: Nunito;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  padding: 1px;
+}
+@media screen and (min-width: 1440px) {
+  .customize__title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    padding: 5rem 25rem;
+  }
+}
+.customize__shape {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .customize__shape {
+    display: unset;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.Customization {
+  flex-direction: column;
+  display: grid;
+  grid-gap: 1rem;
+  text-align: center;
+  color: #333136;
+  grid-template-columns: repeat(2, 1fr);
+}
+.Customization__item {
+  z-index: 9;
+}
+.Customization__item:hover {
+  padding: 0.5rem;
+  box-shadow: 0px 0px 4px 4px rgba(92, 129, 119, 0.5);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.Customization__item:focus {
+  padding: 1rem;
+  box-shadow: 0px 0px 4px 4px rgba(92, 129, 119, 0.5);
+  border-radius: 8px;
+}
+@media screen and (min-width: 1440px) {
+  .Customization {
+    display: grid;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 2rem;
+    margin: 0px 7rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.Customization__image {
+  width: 50%;
+  margin-bottom: 3rem;
+}
+.Customization__subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.25rem;
+  margin: 0;
 }
 
 body {
