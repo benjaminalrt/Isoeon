@@ -1,9 +1,20 @@
 @import 'navbar';
 @import 'footer';
 @import '../utils/variables';
+
 body {
-    #custom a, img {
-        color: $primary;
+    header {
+        .navbar {
+            svg {
+                width: 30px;
+                height: 30px;
+                margin-right: 5px;
+            }
+            .active svg, .active a {
+                color: $primary;
+                fill: $primary;
+            }
+        }
     }
 
     main{
@@ -13,15 +24,30 @@ body {
         align-items: center;
         .custom {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            @include lg() {
+                flex-direction: row;
+            }
             justify-content: center;
             align-items: center;
-            background-image: url(../../img/shape01.svg);
+            position: relative;
+
+            // TODO : finir l'ajout des images !!!!!!!!
+            // &::after {
+            //     background: url(../img/shape01.svg);
+            //     content: '';
+            //     position: absolute;
+            // }
+
             form {
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
+                @include lg() {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                justify-content: center;
+                align-items: center;
                 fieldset {
                     border: none;
                     background: #F8F8F8;
@@ -39,11 +65,10 @@ body {
                     }
                     
                 }
-    
                 .print_field {
                     display: flex;
                     flex-direction: column;
-    
+
                     .print__select {
                         border: none;
                         font-size: 16px;
@@ -63,10 +88,14 @@ body {
                         border-radius: 28px;
                         padding: 5px;
                     }
-    
                 }
-    
                 .size_field {
+                    display: flex;
+                    flex-direction: column;
+                    @include lg() {
+                        flex-direction: row;
+
+                    }
                     [type=radio] {
                         opacity: 0;
                     }
@@ -94,7 +123,7 @@ body {
                         align-items: center;
                         font-size: 16px;
                         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-                        img {
+                        svg {
                             width: 40px;
                             height: 40px;
                             margin-right: 10px;
@@ -102,50 +131,71 @@ body {
                         &:hover {
                         color: $white;
                         background-color: $primary;
+                            svg {
+                                fill: $white;
+                            }
                         }
                     }
                 }
             }
-            
         }
-    
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+        }
+
         .inspiration {
-            width: 1008px;
-            margin: 50px 0px;
+            width: 100%;
+
+            @include lg() {
+                margin: 50px 0px;
+            }
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background: #F8F8F8;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            h2 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
             .gallery {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                @include lg() {
+                    flex-direction: row;
+                }
                 justify-content: center;
                 align-items: center;
-                
                 h5 {
                     margin: 0px 0px 5px 5px;
                 }
                 section {
                     display: flex;
                     flex-direction: column;
-                    justify-content: start;
+                    justify-content: center;
                     align-items: center;
+                    
                     img {
                         width: 50%;
                         height: 50%;
                     }
                     .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
                         p {
                             font-size: 12px;
                             margin: 0px 0px 5px 5px;
                         }
-                        
                     }
-                    
                 }
-    
             }
         }
     }
