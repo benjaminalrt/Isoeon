@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/main.css">
+    <link rel="icon" type="image/svg" sizes="16x16" href="./resources/img/logo.svg">
     <title>Isoeon</title>
 </head>
 
 <body>
+    <!--Header start-->
     <header>
+        <div class="header">
+            <img class="header__logo" src="./resources/img/logo.svg" alt="logo">
+            <img class="header__shape" src="./resources/img/shape01.svg" alt="shape01">
+        </div>
         <div class="navbar">
             <div class="navbar__logo">
                 <a href="#"><img src=""></a>
@@ -18,25 +24,144 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#"><img class="navbar__icon" src="./resources/img/home-outline.svg">home</a>
+                        <a href="#"><img class="navbar__icon" src="./resources/img/home-outline.svg" alt="home">home</a>
                     </li>
-                    <li><img class="navbar__separator" src="./resources/img/Separator.svg"></li>
                     <li>
-                        <a href="#"><img class="navbar__icon" src="./resources/img/color-palette-outline.svg">get your
+                        <img class="navbar__separator" src="./resources/img/Separator.svg">
+                    </li>
+                    <li>
+                        <a href="#"><img class="navbar__icon" src="./resources/img/color-palette-outline.svg" alt="getyourown">get your
                             own</a>
                     </li>
-                    <li><img class="navbar__separator" src="./resources/img/Separator.svg"></li>
                     <li>
-                        <a href="#"><img class="navbar__icon" src="./resources/img/info-outline.svg">about us</a>
+                        <img class="navbar__separator" src="./resources/img/Separator.svg">
+                    </li>
+                    <li>
+                        <a href="#"><img class="navbar__icon" src="./resources/img/info-outline.svg" alt="aboutus">about us</a>
                     </li>
                     <li><img class="navbar__separator" src="./resources/img/Separator.svg"></li>
                     <li>
-                        <a href="#"><img class="navbar__icon" src="./resources/img/person-outline.svg">account</a>
+                        <a href="#"><img class="navbar__icon" src="./resources/img/person-outline.svg" alt="account">account</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!--Header end-->
+
+    <!--Main start-->
+    <main>
+        <article class="hero">
+            <div>
+                <h2 class="hero__title">Isoeon</h2>
+                <p class="hero__subtitle">Your product, your design</p>
+            </div>
+            <img class="hero__image" src="./resources/img/Bottles.svg" alt="bottles">
+        </article>
+
+        <section class="customize">
+            <img class="customize__shape" src="./resources/img/shape02.svg" alt="shape02">
+            <div class="customize__content">
+                <h2 class="customize__title">Choisissez votre nouvelle thermos et personnalisez la !</h2>
+            </div>
+            <div class="Customization">
+                <article class="Customization__item">
+                    <img class="Customization__image" src="./resources/img/bouteille01.png"
+                        alt="BOUTEILLE BOHÈME STONE BLUE ">
+                    <h3 class="Customization__subtitle">BOUTEILLE BOHÈME STONE BLUE </h3>
+                </article>
+                <article class="Customization__item">
+                    <img class="Customization__image" src="./resources/img/bouteille01.png"
+                        alt="BOUTEILLE BOHÈME PRUNE">
+                    <h3 class="Customization__subtitle">BOUTEILLE BOHÈME PRUNE</h3>
+                </article>
+                <article class="Customization__item">
+                    <img class="Customization__image" src="./resources/img/bouteille01.png"
+                        alt="BOUTEILLE BOHÈME PRUNE">
+                    <h3 class="Customization__subtitle">BOUTEILLE BOHÈME PRUNE</h3>
+                </article>
+                <article class="Customization__item">
+                    <img class="Customization__image" src="./resources/img/bouteille01.png"
+                        alt="BOUTEILLE BOHÈME STONE BLUE ">
+                    <h3 class="Customization__subtitle">BOUTEILLE BOHÈME STONE BLUE </h3>
+                </article>
+            </div>
+            <div class="customize__button">
+                <button class="button button--mobile-centered">Personnaliser</button>
+            </div>
+        </section>
+
+        <section class="accessories">
+            <div class="accessories__content">
+                <h2 class="accessories__title">Pourquoi Isoeon ?</h2>
+
+                <hr class="accessories__separator">
+                <p class="accessories__text">Nous privilégions des matériaux sains et résistants pour nos produits. Le
+                    verre ou l’acier inoxydable peuvent entrer en contact avec l’alimentation et les boissons, chaudes
+                    ou froides, sans crainte pour l’organisme - contrairement au plastique ou à l’aluminium. 100% sains
+                    et zéro déchet !</p>
+            </div>
+            <div class="accessory">
+                <article class="accessory__item">
+                    <img class="accessory__image" src="./resources/img/Ellipse01.png" alt="bouteilles">
+                    <h3 class="accessory__subtitle">Bouteilles isotherme</h3>
+                    <p class="accessory__description">
+                        Une gourde réutilisable équivaut à éviter l’achat de 96 bouteilles en plastique en moyenne par
+                        an. Un chouette geste pour la planète qui a de plus en plus de mal à supporter le plastique.
+                    </p>
+                </article>
+                <article class="accessory__item">
+                    <img class="accessory__image" src="./resources/img/Ellipse02.png" alt="Personnalisation">
+                    <h3 class="accessory__subtitle">Personnalisation</h3>
+                    <p class="accessory__description">
+                        Bouteilles isothermes en inox : motifs tendance et il y en a pour tous
+                        les goûts !
+                        L’accessoire idéal pour les nomades passionnés de thé qui souhaitent alterner entre le plaisir
+                        de l’eau fraîche ou la joie d’une infusion.
+                    </p>
+                </article>
+                <article class="accessory__item">
+                    <img class="accessory__image" src="./resources/img/Ellipse03.png" alt="bouchon_infuseur">
+                    <h3 class="accessory__subtitle">Bouchon infuseur</h3>
+                    <p class="accessory__description">
+                        Le Bouchon Infuseur en inox qui s’adapte sur nos bouteilles isothermes.
+                        Le bouchon peut s’utiliser seul ou avec le filtre (le filtre se visse et se dévisse du bouchon).
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="opinions">
+            <img class="opinions__eclipse" src="./resources/img/Ellipse04.png" alt="eclipse02">
+
+            <div class="opinion">
+                <h2 class="opinions__title">People Are Saying About Us</h2>
+                <article class="opinion__item">
+                    <p class="opinion__text">
+                        Très beau produit de qualité. Expédition rapide et soignée.
+                        Très satisfaite de cette enseigne. Vraiment très professionnel. Deux ans que je suis une cliente</p>
+                    <img class="opinion__img" src="./resources/img/Ellipse_img1.png"/>
+                    <h4 class="opinion__name">Claire</h4>
+                </article>
+
+                <article class="opinion__item other">
+                    <p class="opinion__text">
+                        Site très clair, facile d'utilisation, beaucoup de choix, possibilité de suivi du produit de la commande à la livraison, livraison dans les délais annoncés.                  </p>
+                    <img class="opinion__img" src="./resources/img/Ellipse_img2.png"/>
+                    <h4 class="opinion__name">Sandra</h4>
+                </article>
+                
+                <article class="opinion__item other">
+                    <p class="opinion__text">
+                        Je suis très satisfait de la marque des produits et du service.Une belle bouteuille personnalisée ,pratique et un mug idéal pour le thé au bureau.                    </p>
+                    <img class="opinion__img" src="./resources/img/Ellipse_img3.png"/>
+                    <h4 class="opinion__name">Christine</h4>
+                </article>
+            </div>
+        </section>
+
+    </main>
+    <!--Main end-->
 
     <!--Footer start-->
     <footer class="footer">

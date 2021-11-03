@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0;
@@ -5,8 +6,7 @@ body {
 }
 
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-family: "Montserrat";
+  font-family: Nunito;
 }
 
 .container {
@@ -14,17 +14,53 @@ body {
   padding-right: 4rem;
 }
 
+.button {
+  font-weight: 700;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  background-color: #FFAD9B;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+  font-family: Nunito, sans-serif;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  z-index: 9;
+}
+.button--mobile-centered {
+  margin: 3rem auto;
+}
+@media screen and (min-width: 1440px) {
+  .button--mobile-centered {
+    z-index: 9;
+    margin: 6rem auto;
+  }
+}
+.button:hover {
+  background-color: #F08F77;
+}
+
 .navbar {
+  position: sticky;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 .navbar nav {
-  padding: 12px 32px;
-  background: #F8F8F8;
+  margin: 0 1rem;
+  padding: 12px 12px;
+  background: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 34px;
   text-align: center;
+}
+.navbar nav__burger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .navbar ul {
   padding: 0;
@@ -36,16 +72,57 @@ body {
   list-style: none;
 }
 .navbar li a {
+  font-family: Nunito;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   color: #000000;
 }
+.navbar li a:hover {
+  color: #F08F77;
+}
 .navbar li .navbar__icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .navbar nav {
+    padding: 12px 32px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 34px;
+    text-align: center;
+  }
+  .navbar nav__burger-button {
+    display: none;
+  }
+  .navbar ul {
+    padding: 0;
+    margin: 0;
+    gap: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  .navbar li a {
+    font-family: Nunito;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+  }
+  .navbar li a:hover {
+    color: #F08F77;
+  }
+  .navbar li .navbar__icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
 }
 
 .footer {
@@ -69,7 +146,6 @@ body {
   }
 }
 .footer__separator {
-  display: none;
   border-top: 1px solid #2A2D34;
   opacity: 10%;
   margin: 0;
@@ -482,5 +558,325 @@ body {
   .order-details__totals-line h4 {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero__title {
+  font-family: Nunito;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #2A2D34;
+  margin: 2rem;
+}
+.hero__subtitle {
+  font-family: Nunito;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #2A2D34;
+  letter-spacing: 1px;
+}
+.hero__image {
+  position: sticky;
+  width: 500px;
+}
+@media screen and (min-width: 1440px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__title {
+    font-family: Nunito;
+    font-size: 4rem;
+    font-weight: 600;
+    color: #2A2D34;
+    margin: 2rem;
+  }
+  .hero__subtitle {
+    font-family: Nunito;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #2A2D34;
+    letter-spacing: 1px;
+  }
+  .hero__image {
+    position: sticky;
+    width: 800px;
+  }
+}
+
+.accessories {
+  color: #2A2D34;
+  text-align: center;
+  padding-top: 5rem;
+}
+.accessories__title {
+  font-family: Nunito;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #2A2D34;
+  letter-spacing: 1px;
+}
+.accessories__text {
+  font-family: Nunito;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding-bottom: 3rem;
+  opacity: 0.6;
+  margin: 2rem 2rem;
+}
+.accessories__separator {
+  border-top: 2px solid #000000;
+  opacity: 0.2;
+  margin: 0 14rem;
+}
+@media screen and (min-width: 1440px) {
+  .accessories__title {
+    font-family: Nunito;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #2A2D34;
+    letter-spacing: 1px;
+    padding-top: 5rem;
+  }
+  .accessories__text {
+    font-family: Nunito;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding-bottom: 3rem;
+    opacity: 0.6;
+    margin: 2rem 20rem;
+  }
+  .accessories__separator {
+    border-top: 2px solid #000000;
+    opacity: 0.2;
+    margin: 0 43rem;
+  }
+}
+
+.accessory {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+  text-align: center;
+  color: #2A2D34;
+  padding-bottom: 5rem;
+}
+@media screen and (min-width: 1440px) {
+  .accessory {
+    flex-direction: row;
+    column-gap: 1.5rem;
+    margin: 0 7rem;
+    padding-bottom: 7.5rem;
+  }
+}
+.accessory__image {
+  margin-bottom: 3rem;
+}
+.accessory__subtitle {
+  font-family: Nunito;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.15rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+.accessory__description {
+  font-family: Nunito;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0 1rem;
+  opacity: 0.8;
+}
+
+.customize {
+  color: #2A2D34;
+  text-align: center;
+  display: initial;
+}
+.customize__title {
+  font-family: Nunito;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  padding: 1px;
+}
+@media screen and (min-width: 1440px) {
+  .customize__title {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    padding: 5rem 25rem;
+  }
+}
+.customize__shape {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .customize__shape {
+    display: unset;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.Customization {
+  flex-direction: column;
+  display: grid;
+  grid-gap: 1rem;
+  text-align: center;
+  color: #333136;
+  grid-template-columns: repeat(2, 1fr);
+}
+.Customization__item {
+  z-index: 9;
+}
+.Customization__item:hover {
+  margin: 0.5rem;
+  box-shadow: 0px 0px 4px 4px rgba(92, 129, 119, 0.5);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.Customization__item:focus {
+  padding: 1rem;
+  box-shadow: 0px 0px 4px 4px rgba(92, 129, 119, 0.5);
+  border-radius: 8px;
+}
+@media screen and (min-width: 1440px) {
+  .Customization {
+    display: grid;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 2rem;
+    margin: 0px 7rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.Customization__image {
+  width: 50%;
+  margin-bottom: 3rem;
+}
+.Customization__subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.25rem;
+  margin: 0;
+}
+
+.opinions {
+  height: 36rem;
+  background-color: #5C8177;
+  color: #ffffff;
+  padding: 1rem 4rem;
+}
+.opinions__title {
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 31px;
+  color: #ffffff;
+}
+.opinions__eclipse {
+  position: absolute;
+  transform: translateX(-65px);
+}
+
+@media screen and (min-width: 1440px) {
+  .opinions {
+    height: 26rem;
+    background-color: #5C8177;
+    color: #ffffff;
+    padding: 4rem;
+  }
+  .opinions__title {
+    font-family: Nunito;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 33px;
+    color: #ffffff;
+  }
+}
+.opinion {
+  flex-direction: column;
+  display: grid;
+  grid-gap: 2rem;
+  color: #333136;
+  grid-template-columns: 1fr;
+}
+.opinion__text {
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+}
+.opinion__item {
+  position: relative;
+  background-color: #ffffff;
+  color: #2A2D34;
+  padding: 0 2rem;
+  border-radius: 5%;
+}
+
+.other {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 1440px) {
+  .opinion {
+    flex-direction: column;
+    display: grid;
+    grid-gap: 2rem;
+    color: #333136;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    padding-top: 2rem;
+  }
+  .opinion__text {
+    font-family: Nunito;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .opinion__item {
+    position: relative;
+    background-color: #ffffff;
+    color: #2A2D34;
+    padding: 0 2rem;
+    border-radius: 5%;
+  }
+
+  .other {
+    visibility: initial;
+  }
+}
+body {
+  font-family: Nunito;
+}
+
+header .header__logo {
+  position: absolute;
+  margin: 1rem 5rem;
+}
+header .header__shape {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  header .header__shape {
+    display: unset;
+    position: absolute;
+    left: 18.7rem;
   }
 }
