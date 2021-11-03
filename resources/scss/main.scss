@@ -1,2 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito');
+
 @import 'utils/index';
 @import 'components/index';
+
+
+body {
+    font-family: Nunito;
+}
+header{
+    .header__logo{
+        position: absolute;
+        margin: 1rem 5rem;
+    }
+    .header__shape{
+        display: none;
+    }
+    @include xxl {
+        .header__shape{
+            display: unset;
+            position: absolute;
+            left: 18.7rem;
+        }
+    }
+}
