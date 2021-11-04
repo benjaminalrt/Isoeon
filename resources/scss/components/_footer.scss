@@ -1,8 +1,13 @@
 .footer {
-    padding: 4rem 7.5rem;
+    padding: toRem(16) toRem(64) toRem(200);
     text-align: center;
 
+    a:hover {
+        color: $primary;
+    }
+
     @include xxl {
+        padding: toRem(64) toRem(64) 0;
         text-align: left;
     }
 
@@ -50,12 +55,13 @@
     &__abouts {
         display: flex;
         flex-direction: column;
-        row-gap: 2.5rem;
+        row-gap: 0.4rem;
         color: $dark;
         line-height: 1.5rem;
         margin-bottom: 2.5rem;
 
         @include xxl {
+            row-gap: 2.5rem;
             flex-direction: row;
             justify-content: space-between;
             margin-bottom: 0;
@@ -94,10 +100,22 @@
     }
 
     &__socials {
-        height: 24px;
         display: flex;
         column-gap: 1rem;
         justify-content: center;
+        list-style: none;
+        padding: 0;
+        li{
+            svg{
+                height: 24px;
+                color: $dark;
+            }
+            &:hover{
+                svg{
+                    fill: $primary;
+                }
+            }
+        }
 
         @include xxl {
             justify-self: end;

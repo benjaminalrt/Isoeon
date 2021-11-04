@@ -1,18 +1,4 @@
-body {
-    header {
-        .navbar {
-            svg {
-                width: 30px;
-                height: 30px;
-                margin-right: 5px;
-            }
-            .active svg, .active a {
-                color: $primary;
-                fill: $primary;
-            }
-        }
-    }
-
+body.custom-page {
     main{
         display: flex;
         flex-direction: column;
@@ -21,32 +7,26 @@ body {
         .custom {
             display: flex;
             flex-direction: column;
-            @include lg() {
+            @include xxl() {
                 flex-direction: row;
             }
             justify-content: center;
             align-items: center;
             position: relative;
 
-            // TODO : finir l'ajout des images !!!!!!!!
-            // &::after {
-            //     background: url(../img/shape01.svg);
-            //     content: '';
-            //     position: absolute;
-            // }
-
             form {
                 display: flex;
                 flex-direction: column;
-                @include lg() {
+                @include xxl() {
                     justify-content: flex-start;
                     align-items: flex-start;
                 }
                 justify-content: center;
                 align-items: center;
                 fieldset {
+                    border-radius: toRem(20);
                     border: none;
-                    background: #F8F8F8;
+                    background: $white;
                     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
                     margin: 25px 0px;
                     padding: 15px;
@@ -88,7 +68,7 @@ body {
                 .size_field {
                     display: flex;
                     flex-direction: column;
-                    @include lg() {
+                    @include xxl() {
                         flex-direction: row;
 
                     }
@@ -109,6 +89,7 @@ body {
                 .checkout {
                     padding: 10px 50px;
                     .button__checkout{
+                        color: $white;
                         cursor: pointer;
                         padding: 12px 32px;
                         border: none;
@@ -123,6 +104,7 @@ body {
                             width: 40px;
                             height: 40px;
                             margin-right: 10px;
+                            fill: $white;
                         }
                         &:hover {
                         color: $white;
@@ -145,13 +127,16 @@ body {
 
         .inspiration {
             width: 100%;
+            padding: toRem(8) toRem(16);
 
-            @include lg() {
+            @include xxl() {
                 margin: 50px 0px;
+                gap: toRem(32);
             }
             display: flex;
             flex-direction: column;
             justify-content: center;
+            gap: toRem(64);
             align-items: center;
             background: #F8F8F8;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
@@ -164,8 +149,10 @@ body {
             .gallery {
                 display: flex;
                 flex-direction: column;
-                @include lg() {
+                gap: toRem(32);
+                @include xxl() {
                     flex-direction: row;
+                    gap: toRem(0);
                 }
                 justify-content: center;
                 align-items: center;

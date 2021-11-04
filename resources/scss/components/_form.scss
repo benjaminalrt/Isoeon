@@ -5,7 +5,7 @@
   }
   &-label{
     @include font(12,18);
-    @include lg(){
+    @include xxl(){
       @include font(16,24);
     }
     font-weight: 400;
@@ -15,7 +15,7 @@
     border-radius: 4px;
     padding: toRem(8);
     @include font(12,18);
-    @include lg(){
+    @include xxl(){
       @include font(16,24);
       padding: toRem(12);
     }
@@ -25,7 +25,7 @@
     &::placeholder{
       color: #B8BCCA;
       @include font(12,18);
-      @include lg(){
+      @include xxl(){
         @include font(16,24);
       }
     }
