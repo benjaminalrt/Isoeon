@@ -1,5 +1,8 @@
+//$xxl: 1440px;
+$xxl: 980px;
+
 @mixin xxl {
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $xxl) {
         @content
     }
 }

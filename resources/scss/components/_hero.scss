@@ -5,18 +5,21 @@
     text-align: center;
 
     &__title{
-        font-family: Nunito;
-        font-size: 4rem;
+        @include font(32,48);
+        @include xxl(){
+            @include font(64,80);
+        }
         font-weight: 600;
         color: $dark;
         margin: 2rem;
     }
 
     &__subtitle{
-        font-family: Nunito;
-        font-size: 2.5rem;
+        @include font(20,30);
+        @include xxl(){
+            @include font(44,56);
+        }
         font-weight: 500;
-        line-height: 1.5rem;
         color: $dark;
         letter-spacing: 1px;
     }
@@ -33,7 +36,6 @@
         text-align: center;
 
         &__title{
-            font-family: Nunito;
             font-size: 4rem;
             font-weight: 600;
             color: $dark;
@@ -41,7 +43,6 @@
         }
 
         &__subtitle{
-            font-family: Nunito;
             font-size: 2.5rem;
             font-weight: 500;
             line-height: 1.5rem;

@@ -5,11 +5,10 @@
     border-radius: 5rem;
     padding: 1rem 1.5rem;
     border: none;
-    background-color: #FFAD9B;
-    color: #fff;
+    background-color: $lighter;
+    color: $white;
     cursor: pointer;
     transition: background-color 150ms ease-in-out;
-    font-family: Nunito, sans-serif;
     letter-spacing: 1px;
     white-space: nowrap;
     z-index: 9;
@@ -19,7 +18,7 @@
 
         @include xxl {
             z-index: 9;
-            margin: 6rem auto;
+            margin: 4rem auto;
         }
     }
 

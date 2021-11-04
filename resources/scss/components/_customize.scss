@@ -3,24 +3,27 @@
     text-align: center;
     display:initial;
     &__title{
-        font-family: Nunito;
         font-size: 2rem;
         font-weight: 500;
         line-height: 2.5rem;
-        padding: 1px; 
+        padding: 5rem 20%;
     }
     @include xxl {
         &__title{
             font-size: 2.5rem;
             line-height: 2.5rem;
-            letter-spacing: 1px; 
-            padding: 5rem 25rem;
+            letter-spacing: 1px;
+
         }
     }
     &__shape{
         display: none;
     }
     @include xxl {
+        &__content{
+            display: flex;
+            justify-content: center;
+        }
         &__shape{
             display: unset;
             position: absolute;
